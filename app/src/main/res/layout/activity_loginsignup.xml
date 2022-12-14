@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#64E1F1"
+    tools:context=".loginsignup">
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="167dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginEnd="122dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="WELCOME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0C0C0C"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="223dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#5E5858"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="225dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="221dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRemMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="278dp"
+        android:text="TextView"
+        android:textColor="#555555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Remember me" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="#FFEB3B"
+        android:textColor="@color/black"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <TextView
+        android:id="@+id/upperyellowbar"
+        android:layout_width="434dp"
+        android:layout_height="28dp"
+        android:background="#FFEB3B"
+        tools:layout_editor_absoluteX="-11dp"
+        tools:layout_editor_absoluteY="-6dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
