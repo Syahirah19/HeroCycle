@@ -10,4 +10,12 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="Welcome">WELCOME</string>
+    <string name="Hello">Hello, User</string>
+    <string name="Hero">Let\'s be a hero today</string>
+    <string name="save">Save</string>
+    <string name="full_name">Full Name</string>
+    <string name="userpicture">userPicture</string>
+    <string name="email">Email</string>
+    <string name="edit_profile">Edit Profile</string>
+
 </resources>

@@ -8,14 +8,14 @@
     tools:context=".loginsignup">
 
     <TextView
-        android:id="@+id/txtWelcome"
+        android:id="@+id/txtLogin"
         android:layout_width="236dp"
         android:layout_height="66dp"
         android:layout_marginTop="348dp"
         android:layout_marginEnd="96dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="@string/Welcome"
+        android:text="LOG IN"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
         android:textSize="48sp"
@@ -73,11 +73,12 @@
         android:id="@+id/txtforgotpsswd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="536dp"
+        android:layout_marginTop="528dp"
+        android:layout_marginEnd="96dp"
         android:text="TextView"
-        android:textColor="#0000FF"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#3F00FF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Forgot Password" />
 
@@ -90,19 +91,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="322dp"
-        android:layout_height="433dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="316dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/handshake" />
-
-    <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgEyeClose"
         android:layout_width="19dp"
         android:layout_height="19dp"
         android:layout_marginStart="285dp"
@@ -110,6 +99,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eye_close" />
+
+    <ImageView
+        android:id="@+id/imgCycling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="176dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cycling" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
