@@ -4,21 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#77dd77"
     tools:context=".MainDashboard">
+
+    <TextView
+        android:id="@+id/upperyellowbar"
+        android:layout_width="434dp"
+        android:layout_height="28dp"
+        android:background="#FFEB3B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="599dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="@string/Hello"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#0C0C0C"
-        android:textSize="30sp"
+        android:text="@string/welcome_back"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,56 +37,73 @@
         android:id="@+id/txtHeading1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="132dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginBottom="572dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/Hero"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
-        android:textSize="12sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txwhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="What do you want to recycle today?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0C0C0C"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="302dp" />
 
     <ImageView
         android:id="@+id/imgAccount"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="312dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/account" />
-
-    <ImageView
-        android:id="@+id/imgHome"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/home" />
-
-    <ImageView
-        android:id="@+id/imgLocation"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/location" />
 
     <ImageView
         android:id="@+id/imgRecycle"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="144dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/recycle" />
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/location" />
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
