@@ -27,7 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/eye_close" />
+        app:srcCompat="@drawable/eye_close"
+        android:contentDescription="@string/eye_close" />
 
     <TextView
         android:id="@+id/txtSignUp"
@@ -39,7 +40,7 @@
         android:layout_marginBottom="317dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
         android:textSize="48sp"
@@ -58,7 +59,7 @@
         android:layout_marginBottom="259dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:textColor="#5E5858"
         android:textColorHint="#006064"
@@ -77,13 +78,14 @@
         android:layout_marginBottom="211dp"
         android:ems="10"
         android:foregroundGravity="center"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textColorHint="#006064"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/edtTextPhone"
@@ -96,13 +98,14 @@
         android:ems="10"
         android:foregroundGravity="center"
         android:gravity="center_vertical"
-        android:hint="Mobile"
+        android:hint="@string/mobile"
         android:inputType="phone"
         android:textColorHint="#006064"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtsigningup"
@@ -112,8 +115,8 @@
         android:layout_marginTop="574dp"
         android:layout_marginEnd="111dp"
         android:layout_marginBottom="132dp"
-        android:text="By signing up, you're agree to our "
-        android:textSize="12dp"
+        android:text="@string/by_signing_up_you_re_agree_to_our"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,13 +130,15 @@
         android:layout_marginTop="596dp"
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="109dp"
-        android:text="Terms, Conditions and Privacy Policy"
+        android:text="@string/terms_conditions_and_privacy_policy"
         android:textColor="#3F00FF"
-        android:textSize="12dp"
+        android:textSize="12sp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/btnContinue"
@@ -144,14 +149,15 @@
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="62dp"
         android:backgroundTint="#FFEB3B"
-        android:text="Continue"
+        android:text="@string/Continue"
         android:textColor="@color/black"
         android:onClick="goAccount"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -165,7 +171,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/handshake" />
+        app:srcCompat="@drawable/handshake"
+        android:contentDescription="@string/handshake_illustration" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

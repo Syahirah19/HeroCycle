@@ -4,21 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#77dd77"
+    android:background="@color/white"
     tools:context=".MainDashboard">
 
     <TextView
         android:id="@+id/upperyellowbar"
-        android:layout_width="434dp"
-        android:layout_height="28dp"
-        android:background="#FFEB3B"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="413dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="680dp"
+        android:background="@drawable/circle"
+        android:elevation="20dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="66dp"
         android:layout_marginStart="22dp"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="99dp"
@@ -28,10 +32,13 @@
         android:text="@string/welcome_back"
         android:textColor="@color/black"
         android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtHeading1"
@@ -56,23 +63,33 @@
         android:id="@+id/txwhat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginBottom="483dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="What do you want to recycle today?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="302dp" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgAccount"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="312dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="44dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/account" />
 
     <ImageView
@@ -80,9 +97,14 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="144dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="212dp"
         android:layout_marginBottom="36dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/recycle" />
 
     <ImageView
@@ -90,9 +112,13 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="232dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="124dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/location" />
 
     <ImageView
@@ -100,9 +126,13 @@
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="304dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home" />
 
 

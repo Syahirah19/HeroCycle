@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:andriod="http://schemas.android.com/aapt">
+
+    <item>
+        <shape>
+            <gradient
+                andriod:angle="90"
+                andriod:startcolor = "#00ff99"
+                andriod:endcolor = "#ffff99"
+                andriod:type = "linear"
+            />
+        </shape>
+</item>
+</selector>

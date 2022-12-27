@@ -29,12 +29,8 @@ public class loginsignup extends AppCompatActivity {
         txtRegister = findViewById(R.id.txtRegister);
 
         //    kalau nak gerak ke page lain
-        txtRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(loginsignup.this, Register.class));
-            }
-        });
+        txtRegister.setOnClickListener(
+                view -> startActivity(new Intent(loginsignup.this, Register.class)));
 
     }
 }

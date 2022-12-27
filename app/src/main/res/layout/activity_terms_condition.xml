@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermsCondition"
+    tools:ignore="ExtraText"
+    tools:layout_editor_absoluteX="14dp"
+    tools:layout_editor_absoluteY="-32dp">
+
+
+    <TextView
+        android:id="@+id/upperyellowbar"
+        android:layout_width="413dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="670dp"
+        android:background="@drawable/circle"
+        android:elevation="20dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <TextView
+        android:id="@+id/txtTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="583dp"
+        android:text="@string/terms_amp_condition"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="292dp"
+        android:layout_marginBottom="547dp"
+        android:text="@string/version_3_0_1"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTerms"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtBetween"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="491dp"
+        android:text="@string/these_terms_and_conditions_set_out_the_agreement_between"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtYou"
+        android:layout_width="294dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="471dp"
+        android:text="@string/you_the_person_we_ve_opened_an_account_for"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUs"
+        android:layout_width="333dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="269dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="425dp"
+        android:text="@string/us_herocycle_recyling_application_so_whenever_you_see"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtItalicUs"
+        android:layout_width="84dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="425dp"
+        android:text="@string/we_us_or_our"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtcontUs"
+        android:layout_width="215dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="427dp"
+        android:text="@string/you_know_who_we_re_referring_to"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNutshell"
+        android:layout_width="112dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginEnd="273dp"
+        android:layout_marginBottom="384dp"
+        android:text="@string/in_nutshell"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCondition"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="358dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="321dp"
+        android:text="@string/we_care_about_your_privacy_and_we_always_want_to_be_transparent_about_how_herocycle_handles_your_data"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDta"
+        android:layout_width="330dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="222dp"
+        android:text="@string/your_data_is_not_our_business_we_only_collect_your_personal_data_that_s_essential_to_do_the_recycling_delivery_we_own_herocycle_but_everything_you_put_in_it_is_100_your_own_we_ll_never_share_it_with_3rd_parties_without_your_express_permission"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="txtUs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagSecurity"
+        android:layout_width="301dp"
+        android:layout_height="381dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="60dp"
+        android:contentDescription="security"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/security" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
