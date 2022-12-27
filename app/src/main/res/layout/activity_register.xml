@@ -17,87 +17,90 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="322dp"
-        android:layout_height="433dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="316dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/handshake" />
-
-    <ImageView
         android:id="@+id/imageView6"
         android:layout_width="19dp"
         android:layout_height="19dp"
-        android:layout_marginStart="285dp"
+        android:layout_marginStart="312dp"
         android:layout_marginTop="490dp"
+        android:layout_marginBottom="222dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/eye_close" />
 
     <TextView
         android:id="@+id/txtSignUp"
         android:layout_width="236dp"
         android:layout_height="66dp"
+        android:layout_marginStart="79dp"
         android:layout_marginTop="348dp"
         android:layout_marginEnd="96dp"
+        android:layout_marginBottom="317dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="#0C0C0C"
-        android:textSize="48sp"
         android:gravity="center"
         android:text="Sign Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0C0C0C"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtEmail"
-        android:layout_width="223dp"
+        android:layout_width="260dp"
         android:layout_height="48dp"
         android:layout_marginStart="101dp"
         android:layout_marginTop="424dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="259dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="#5E5858"
         android:textColorHint="#006064"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtPassword"
-        android:layout_width="225dp"
+        android:layout_width="260dp"
         android:layout_height="48dp"
+        android:layout_marginStart="93dp"
         android:layout_marginTop="472dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="211dp"
         android:ems="10"
         android:foregroundGravity="center"
+        android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="#006064"
-        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="226dp"
-        android:layout_height="44dp"
+        android:id="@+id/edtTextPhone"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="520dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="167dp"
         android:ems="10"
         android:foregroundGravity="center"
         android:gravity="center_vertical"
         android:hint="Mobile"
         android:inputType="phone"
         android:textColorHint="#006064"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,8 +110,12 @@
         android:layout_height="25dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="574dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="132dp"
         android:text="By signing up, you're agree to our "
         android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,26 +125,52 @@
         android:layout_height="26dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="596dp"
-        android:text="Terms &amp; Conditions and Privacy Policy"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="109dp"
+        android:text="Terms, Conditions and Privacy Policy"
         android:textColor="#3F00FF"
         android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnContinue"
         android:layout_width="264dp"
-        android:layout_height="41dp"
+        android:layout_height="50dp"
         android:layout_marginStart="163dp"
         android:layout_marginTop="628dp"
         android:layout_marginEnd="160dp"
+        android:layout_marginBottom="62dp"
         android:backgroundTint="#FFEB3B"
         android:text="Continue"
         android:textColor="@color/black"
+        android:onClick="goAccount"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="405dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="363dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/handshake" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

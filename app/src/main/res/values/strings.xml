@@ -17,5 +17,7 @@
     <string name="userpicture">userPicture</string>
     <string name="email">Email</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="registerNow">Not a member? Register now</string>
 
 </resources>
