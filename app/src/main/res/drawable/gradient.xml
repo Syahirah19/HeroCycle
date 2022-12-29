@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:andriod="http://schemas.android.com/aapt">
-
-    <item>
-        <shape>
-            <gradient
-                andriod:angle="90"
-                andriod:startcolor = "#00ff99"
-                andriod:endcolor = "#ffff99"
-                andriod:type = "linear"
-            />
-        </shape>
-</item>
-</selector>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:startColor="#00ff99"
+        android:endColor="#ffff99"
+        />
+</shape>

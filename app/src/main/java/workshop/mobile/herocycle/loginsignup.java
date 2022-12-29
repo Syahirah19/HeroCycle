@@ -33,4 +33,7 @@ public class loginsignup extends AppCompatActivity {
                 view -> startActivity(new Intent(loginsignup.this, Register.class)));
 
     }
+
+    public void goToActivity_Register(View view) {
+    }
 }

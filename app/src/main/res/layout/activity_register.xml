@@ -9,35 +9,39 @@
 
     <TextView
         android:id="@+id/upperyellowbar"
-        android:layout_width="434dp"
-        android:layout_height="28dp"
-        android:background="#FFEB3B"
-        android:shadowColor="#2196F3"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/circle"
+        android:elevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="19dp"
         android:layout_height="19dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="490dp"
-        android:layout_marginBottom="222dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="224dp"
+        android:contentDescription="@string/eye_close"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/eye_close"
-        android:contentDescription="@string/eye_close" />
+        app:srcCompat="@drawable/eye_close" />
 
     <TextView
         android:id="@+id/txtSignUp"
-        android:layout_width="236dp"
+        android:layout_width="234dp"
         android:layout_height="66dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="317dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="333dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
         android:text="@string/sign_up"
@@ -53,9 +57,9 @@
         android:id="@+id/edtEmail"
         android:layout_width="260dp"
         android:layout_height="48dp"
-        android:layout_marginStart="101dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="424dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginEnd="76dp"
         android:layout_marginBottom="259dp"
         android:autofillHints=""
         android:ems="10"
@@ -72,10 +76,11 @@
         android:id="@+id/edtPassword"
         android:layout_width="260dp"
         android:layout_height="48dp"
-        android:layout_marginStart="93dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="472dp"
-        android:layout_marginEnd="93dp"
+        android:layout_marginEnd="76dp"
         android:layout_marginBottom="211dp"
+        android:autofillHints=""
         android:ems="10"
         android:foregroundGravity="center"
         android:hint="@string/password"
@@ -84,17 +89,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtTextPhone"
         android:layout_width="260dp"
         android:layout_height="48dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="520dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="167dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="518dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="165dp"
+        android:autofillHints=""
         android:ems="10"
         android:foregroundGravity="center"
         android:gravity="center_vertical"
@@ -104,8 +109,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtsigningup"
@@ -130,15 +134,15 @@
         android:layout_marginTop="596dp"
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="109dp"
+        android:clickable="true"
+        android:focusable="true"
         android:text="@string/terms_conditions_and_privacy_policy"
         android:textColor="#3F00FF"
         android:textSize="12sp"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnContinue"
@@ -149,30 +153,30 @@
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="62dp"
         android:backgroundTint="#FFEB3B"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goAccount"
         android:text="@string/Continue"
         android:textColor="@color/black"
-        android:onClick="goAccount"
-        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="405dp"
-        android:layout_height="340dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="409dp"
+        android:layout_height="273dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="363dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/handshake_illustration"
+        app:layout_constraintBottom_toTopOf="@+id/txtSignUp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/handshake"
-        android:contentDescription="@string/handshake_illustration" />
+        app:layout_constraintVertical_bias="0.542"
+        app:srcCompat="@drawable/handshake" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

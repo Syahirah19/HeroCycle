@@ -15,10 +15,9 @@
         android:layout_marginTop="348dp"
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="317dp"
-        android:text="@string/log_in"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:textStyle="bold"
+        android:text="@string/log_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
         android:textSize="48sp"
@@ -29,15 +28,15 @@
 
     <TextView
         android:id="@+id/upperyellowbar"
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="109dp"
-        android:layout_marginBottom="680dp"
+        android:layout_marginTop="-50dp"
         android:background="@drawable/circle"
         android:elevation="20dp"
-        android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <!--    to enter email-->
     <EditText
@@ -62,6 +61,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="480dp"
         android:layout_marginBottom="203dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -71,8 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
@@ -83,16 +82,16 @@
         android:layout_marginTop="528dp"
         android:layout_marginEnd="75dp"
         android:layout_marginBottom="187dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToActivity_Register"
+        android:text="@string/registerNow"
         android:textColor="#3F00FF"
         android:textSize="12sp"
-        android:text="@string/registerNow"
-        android:clickable="true"
-        android:onClick="goToActivity_Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgEyeClose"
@@ -138,6 +137,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <TextView
+        android:id="@+id/txtskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToActivity_Register"
+        android:text="skip"
+        android:textColor="#3F00FF"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="373dp"
+        tools:layout_editor_absoluteY="699dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
