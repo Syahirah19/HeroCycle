@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".news1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upperyellowbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/circle"
+        android:elevation="20dp" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Causes of Global Warming"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 December 2022"
+        android:layout_gravity="center"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/imgDeforestation"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/news2deforestation" />
+
+        <TextView
+            android:id="@+id/txtDeforestation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/imgDeforestation"
+            android:text="@string/deforestation"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="196dp"
+            android:layout_height="117dp"
+            android:layout_below="@id/txtDeforestation"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/imgDeforestation"
+            android:text="The exploitation of forests has a major role in climate change. Trees help regulate the climate by absorbing CO2 from the atmosphere. When they are cut down, this positive effect is lost and the carbon stored in the trees is released into the atmosphere"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/imgwaste"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/news2waste" />
+
+        <TextView
+            android:id="@+id/txtwaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/deforestation"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtheadingWaste"
+            android:layout_width="196dp"
+            android:layout_height="117dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/txtwaste"
+            android:text="The exploitation of forests has a major role in climate change. Trees help regulate the climate by absorbing CO2 from the atmosphere. When they are cut down, this positive effect is lost and the carbon stored in the trees is released into the atmosphere"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="This is just the beginning"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Before its too late, let's be a hero to the earth!"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

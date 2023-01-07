@@ -1,151 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainDashboard">
+    tools:context=".MainDashboard"
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/upperyellowbar"
         android:layout_width="match_parent"
-        android:layout_height="109dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="-50dp"
         android:background="@drawable/circle"
-        android:elevation="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:elevation="20dp" />
 
     <TextView
         android:id="@+id/txtHello"
-        android:layout_width="296dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="73dp"
-        android:layout_marginBottom="583dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
+        android:gravity="start"
         android:text="@string/welcome_back"
         android:textColor="@color/black"
         android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtHeading1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="232dp"
-        android:layout_marginBottom="561dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
+        android:gravity="start"
         android:text="@string/Hero"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txtwhat"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="229dp"
-        android:layout_marginEnd="179dp"
-        android:layout_marginBottom="483dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
+        android:gravity="start"
         android:text="What do you want to recycle today?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RcViewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
 
     <TextView
         android:id="@+id/txwhat"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="410dp"
-        android:layout_marginEnd="302dp"
-        android:layout_marginBottom="302dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center"
+        android:gravity="start"
         android:text="What's news?"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
-    <ImageView
-        android:id="@+id/imgAccount"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/account"
-        tools:layout_editor_absoluteX="312dp"
-        tools:layout_editor_absoluteY="648dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RcViewNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
 
-    <ImageView
-        android:id="@+id/imgRecycle"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/recycle"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="595dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="-30dp"
+        android:gravity="bottom">
 
-    <ImageView
-        android:id="@+id/imgHome"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="648dp" />
+        <TextView
+            android:id="@+id/bxBottom"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/box"
+            android:backgroundTint="@color/yellow"
+            android:layerType="hardware" />
 
-    <TextView
-        android:id="@+id/bxBottom"
-        android:layout_width="411dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="688dp"
-        android:background="@drawable/box"
-        android:backgroundTint="@color/yellow"
-        android:layerType="hardware"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/circleDelivery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/white"/>
 
-    <TextView
-        android:id="@+id/circleDelivery"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="648dp"
-        android:layout_marginEnd="192dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/circle"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginEnd="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@id/imgRecycle"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imgRecycle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-20dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/recycleicon" />
+
+        <ImageView
+            android:id="@+id/imgAccount"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/imgRecycle"
+            app:srcCompat="@drawable/account" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

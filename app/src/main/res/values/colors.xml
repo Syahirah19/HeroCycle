@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="turqoise">#30D5C8</color>
     <color name="yellow">#FFEB3B</color>
+    <color name="ForestGreen">#228b22</color>
+    <color name="greeen">#4cbb17</color>
 
 </resources>

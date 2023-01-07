@@ -39,5 +39,16 @@
     <string name="in_nutshell">In nutshell:</string>
     <string name="we_care_about_your_privacy_and_we_always_want_to_be_transparent_about_how_herocycle_handles_your_data">We care about your privacy, and we always want to be transparent about how HeroCycle handles your data.</string>
     <string name="your_data_is_not_our_business_we_only_collect_your_personal_data_that_s_essential_to_do_the_recycling_delivery_we_own_herocycle_but_everything_you_put_in_it_is_100_your_own_we_ll_never_share_it_with_3rd_parties_without_your_express_permission">Your data is not our business. We only collect your personal data that\'s essential to do the recycling delivery. We own HeroCycle, but everything you put in it is 100% your own. We\'ll never share it with 3rd parties without your express permission</string>
+    <string name="title_activity_news1">News1</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_news2">news2</string>
+    <string name="deforestation">Deforestation</string>
 
 </resources>

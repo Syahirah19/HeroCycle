@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".TermsCondition"
     tools:ignore="ExtraText"
+    android:background="@color/white"
     tools:layout_editor_absoluteX="14dp"
     tools:layout_editor_absoluteY="-32dp">
 
