@@ -33,12 +33,8 @@
     <string name="terms_amp_condition"><![CDATA[Terms & Condition]]></string>
     <string name="version_3_0_1">Version 3.0.1</string>
     <string name="these_terms_and_conditions_set_out_the_agreement_between">These Terms and Conditions set out the agreement between:</string>
-    <string name="you_the_person_we_ve_opened_an_account_for">You - The person we\'ve opened an account for</string>
-    <string name="we_us_or_our">We, Us or Our</string>
     <string name="you_know_who_we_re_referring_to">you know who we\'re referring to.</string>
     <string name="in_nutshell">In nutshell:</string>
-    <string name="we_care_about_your_privacy_and_we_always_want_to_be_transparent_about_how_herocycle_handles_your_data">We care about your privacy, and we always want to be transparent about how HeroCycle handles your data.</string>
-    <string name="your_data_is_not_our_business_we_only_collect_your_personal_data_that_s_essential_to_do_the_recycling_delivery_we_own_herocycle_but_everything_you_put_in_it_is_100_your_own_we_ll_never_share_it_with_3rd_parties_without_your_express_permission">Your data is not our business. We only collect your personal data that\'s essential to do the recycling delivery. We own HeroCycle, but everything you put in it is 100% your own. We\'ll never share it with 3rd parties without your express permission</string>
     <string name="title_activity_news1">News1</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -50,5 +46,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_news2">news2</string>
     <string name="deforestation">Deforestation</string>
+    <string name="you_the_person_we_opened_account_for_n_nus_herocycle_recyling_applications_so_whenever_you_see_we_us_or_our_you_know_who_we_referring_to">You - The person we opened account for \n\nUs - Herocycle, recyling applications. So whenever you see We, us or our. You know who we referring to</string>
+    <string name="we_care_about_your_privacy_and_we_always_want_to_be_transparent_about_how_herocycle_handles_your_data_n_nyour_data_is_not_our_business_we_only_collect_your_personal_data_that_s_essential_to_do_the_recycling_delivery_we_own_herocycle_but_everything_you_put_in_it_is_100_your_own_we_ll_never_share_it_with_3rd_parties_without_your_express_permission">We care about your privacy, and we always want to be transparent about how HeroCycle handles your data. \n\nYour data is not our business. We only collect your personal data that\'s essential to do the recycling delivery. We own HeroCycle, but everything you put in it is 100% your own. We\'ll never share it with 3rd parties without your express permission</string>
+    <string name="security">security</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

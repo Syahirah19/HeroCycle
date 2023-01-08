@@ -1,9 +1,12 @@
 package workshop.mobile.herocycle.rv;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import workshop.mobile.herocycle.News_1;
+import workshop.mobile.herocycle.News_2;
+import workshop.mobile.herocycle.News_3;
+import workshop.mobile.herocycle.News_4;
+import workshop.mobile.herocycle.News_5;
 import workshop.mobile.herocycle.R;
 import workshop.mobile.herocycle.model.RvNews;
 
@@ -32,9 +40,28 @@ public class RvNewsAdapter extends RecyclerView.Adapter<RvNewsAdapter.RvNewsHold
 
     @Override
     public void onBindViewHolder(@NonNull RvNewsAdapter.RvNewsHolder holder, int position) {
-        RvNews currentNew = item.get(position);
-        holder.title.setText(currentNew.getTitle());
-        holder.text.setText(currentNew.getText());
+        RvNews currentNews = item.get(position);
+        holder.title.setText(currentNews.getTitle());
+        holder.imageView.setImageResource(currentNews.getImage());
+
+        holder.linearLayout.setOnClickListener(view -> {
+
+            Intent intent = null;
+
+            if (holder.getLayoutPosition() == 0){
+                intent = new Intent(view.getContext(), News_1.class);
+            } else if (holder.getLayoutPosition() == 1){
+                intent = new Intent(view.getContext(), News_2.class);
+            } else if (holder.getLayoutPosition() == 2){
+                intent = new Intent(view.getContext(), News_3.class);
+            } else if (holder.getLayoutPosition() == 3){
+                intent = new Intent(view.getContext(), News_4.class);
+            } else if (holder.getLayoutPosition() == 4){
+                intent = new Intent(view.getContext(), News_5.class);
+            }
+
+            view.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -44,13 +71,16 @@ public class RvNewsAdapter extends RecyclerView.Adapter<RvNewsAdapter.RvNewsHold
 
     public static class RvNewsHolder extends RecyclerView.ViewHolder{
 
-        TextView title,text;
+        TextView title;
+        ImageView imageView;
+        LinearLayout linearLayout;
 
         public RvNewsHolder(@NonNull View itemView) {
             super(itemView);
 
             title = itemView.findViewById(R.id.title);
-            text = itemView.findViewById(R.id.text);
+            imageView = itemView.findViewById(R.id.image);
+            linearLayout = itemView.findViewById(R.id.linearlayout);
 
         }
     }

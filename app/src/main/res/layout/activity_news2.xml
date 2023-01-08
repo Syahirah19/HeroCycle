@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".news1"
+    tools:context=".News_2"
     android:orientation="vertical">
 
     <TextView
@@ -43,7 +43,7 @@
             android:id="@+id/imgDeforestation"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             app:srcCompat="@drawable/news2deforestation" />
 
@@ -81,7 +81,7 @@
             android:id="@+id/imgwaste"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="230dp"
+            android:layout_marginLeft="220dp"
             android:layout_marginTop="10dp"
             app:srcCompat="@drawable/news2waste" />
 
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             android:text="@string/deforestation"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -100,7 +100,7 @@
             android:id="@+id/txtheadingWaste"
             android:layout_width="196dp"
             android:layout_height="117dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             android:layout_below="@id/txtwaste"
             android:text="The exploitation of forests has a major role in climate change. Trees help regulate the climate by absorbing CO2 from the atmosphere. When they are cut down, this positive effect is lost and the carbon stored in the trees is released into the atmosphere"
             android:textColor="@color/black"
@@ -112,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:text="This is just the beginning"
         android:textColor="@color/black"
         android:textSize="15sp" />
@@ -124,6 +124,6 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

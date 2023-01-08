@@ -1,5 +1,6 @@
 package workshop.mobile.herocycle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,9 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import workshop.mobile.herocycle.model.User;
 
 public class Register extends AppCompatActivity {
 
@@ -18,8 +28,9 @@ public class Register extends AppCompatActivity {
     TextView txtTerms;
     Button btnContinue;
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    FirebaseDatabase firebaseDatabase;
+    User user = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +42,87 @@ public class Register extends AppCompatActivity {
         edtTextPhone = findViewById(R.id.edtTextPhone);
         btnContinue = findViewById(R.id.btnContinue);
         txtTerms = findViewById(R.id.txtTerms);
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference("User");
 
-        myRef.setValue("Hello World");
-
-    //from terms and condition text in register page, move to read the t&d page
+        //from terms and condition text in register page, move to read the t&d page
         txtTerms.setOnClickListener(
-                view -> startActivity(new Intent(Register.this, TermsCondition.class)));
+                view -> startActivity(new Intent(Register.this, TermsCondition.class))
+        );
+    }
+
+    private boolean validateEmail() {
+        String val = edtEmail.getText().toString();
+        String regex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if (val.isEmpty()){
+            edtEmail.setError("field cannot be empty");
+            return false;
+        }
+        else if (!val.matches(regex)){
+            edtEmail.setError("Invalid email address");
+            return false;
+        }
+        else {
+            edtEmail.setError(null);
+            return true;
+        }
+    }
+
+    public boolean validatePassword(){
+        String val = edtPassword.getText().toString();
+        if (val.isEmpty()){
+            edtPassword.setError("field cannot be empty");
+            return false;
+        }
+        else if (!(val.length() ==8)){
+            edtPassword.setError("password length is 8 character");
+            return false;
+        }
+        else {
+            edtPassword.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validatePhone() {
+        String val = edtTextPhone.getText().toString();
+        if (val.isEmpty()){
+            edtTextPhone.setError("field cannot be empty");
+            return false;
+        }
+        else {
+            edtTextPhone.setError(null);
+            return true;
+        }
     }
 
     public void goAccount(View view) {
-        startActivity(new Intent(this, Account.class));
+        if(validateEmail() && validatePassword() && validatePhone()){
+            RegisterUser();
+        }
+    }
+
+    private void RegisterUser() {
+        user.setEmail(edtEmail.getText().toString());
+        user.setMobile(edtTextPhone.getText().toString());
+        user.setPassword(edtPassword.getText().toString());
+
+        db.collection("User").whereEqualTo("email",user.getEmail()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()){
+                    for (QueryDocumentSnapshot document: task.getResult()){
+                        Toast.makeText(Register.this,"Email Already Register", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    db.collection("User").add(user).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentReference> task) {
+                            Toast.makeText(Register.this,"Successfully Registered", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Register.this, MainDashboard.class));
+                        }
+                    });
+                }
+            }
+        });
     }
 }

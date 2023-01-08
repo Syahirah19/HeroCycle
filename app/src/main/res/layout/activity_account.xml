@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/edit_profile"
@@ -33,7 +33,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:id="@+id/imgUser"
@@ -114,15 +115,30 @@
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#FFEB3B"
         android:text="@string/save"
         android:textColor="@color/black"
-/>
-    <RelativeLayout
-        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:onClick="goSave"/>
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Log out"
+        android:textColor="#3F00FF"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:onClick="goLogout"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:id="@+id/imgdiscussion"

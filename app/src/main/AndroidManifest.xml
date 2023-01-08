@@ -16,37 +16,35 @@
         android:theme="@style/Theme.HeroCycle"
         tools:targetApi="31">
         <activity
-            android:name=".news5"
+            android:name=".News_5"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".news4"
+            android:name=".News_4"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".news3"
+            android:name=".News_3"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".news2"
-            android:exported="false"
-            android:label="@string/title_activity_news2"
-            android:theme="@style/Theme.HeroCycle.NoActionBar">
+            android:name=".News_2"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".news1"
+            android:name=".News_1"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

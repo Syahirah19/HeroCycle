@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".news1"
+    tools:context=".News_1"
     android:orientation="vertical">
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/news1"
         />
 
@@ -50,7 +50,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"/>
 
     <TextView
@@ -60,7 +60,7 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,10 +69,9 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_marginTop="20dp" />
 
-       <TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kindly contact 018-552 1019 (Julie) for more detail"

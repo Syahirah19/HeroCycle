@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -16,6 +19,7 @@ import workshop.mobile.herocycle.rv.RvNewsAdapter;
 public class MainDashboard extends AppCompatActivity {
 
     RecyclerView rcViewItem, rcViewNews;
+    private ImageView imgAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,21 @@ public class MainDashboard extends AppCompatActivity {
 
         rcViewItem = findViewById(R.id.RcViewItem);
         rcViewNews = findViewById(R.id.RcViewNews);
+        imgAccount = findViewById(R.id.imgAccount);
 
         item();
         news();
+
+
+        //from image account go to edit profile image
+        imgAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainDashboard.this,Account.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -48,8 +64,12 @@ public class MainDashboard extends AppCompatActivity {
 
         ArrayList<RvNews> item = new ArrayList<>();
 
-        item.add(new RvNews("News 1","Hello"));
+        item.add(new RvNews("Wholesale Price For New Inkjet Catridge", R.drawable.news1));
+        item.add(new RvNews("Causes of Global Warming", R.drawable.news2waste));
+        item.add(new RvNews("Let's Recycle Old Newspaper", R.drawable.news2waste));
+        item.add(new RvNews("Recycle Your Used Cooking Oil", R.drawable.news2waste));
+        item.add(new RvNews("Reduce, Reuse and Recycle", R.drawable.news2waste));
 
-        rcViewItem.setAdapter(new RvNewsAdapter(this,item));
+        rcViewNews.setAdapter(new RvNewsAdapter(this,item));
     }
 }

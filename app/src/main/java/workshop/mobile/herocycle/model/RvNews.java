@@ -1,18 +1,19 @@
 package workshop.mobile.herocycle.model;
 
 public class RvNews {
-    private String title,text;
+    private String title;
+    private int image;
 
-    public RvNews(String title, String text) {
+    public RvNews(String title, int image){
         this.title = title;
-        this.text = text;
+        this.image = image;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getText() {
-        return text;
+    public int getImage() {
+        return image;
     }
 }

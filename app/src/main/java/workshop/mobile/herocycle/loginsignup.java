@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -68,6 +69,11 @@ public class loginsignup extends AppCompatActivity {
                         task -> {
                             if (task.isSuccessful()){
                                 for (QueryDocumentSnapshot document: task.getResult()){
+
+                                    SharedPreferences.Editor editor = getSharedPreferences("UserPreferences",MODE_PRIVATE).edit();
+                                    editor.putString("email",email);
+                                    editor.apply();
+
                                     Intent intent = new Intent(this, MainDashboard.class);
                                     startActivity(intent);
                                     finish();
