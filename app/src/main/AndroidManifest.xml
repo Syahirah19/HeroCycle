@@ -16,6 +16,20 @@
         android:theme="@style/Theme.HeroCycle"
         tools:targetApi="31">
         <activity
+            android:name=".PointCollection"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecycleHistory"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".News_5"
             android:exported="false">
             <meta-data

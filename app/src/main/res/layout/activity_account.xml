@@ -18,11 +18,23 @@
         android:elevation="20dp" />
 
     <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:onClick="goLogout"
+        android:text="Log out"
+        android:textColor="#3F00FF"
+        android:textSize="20sp" />
+    <TextView
         android:id="@+id/txtprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/edit_profile"
@@ -34,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp">
 
         <ImageView
             android:id="@+id/imgUser"
@@ -43,8 +55,6 @@
             android:layout_marginTop="2dp"
             android:layout_marginLeft="20dp"
             android:contentDescription="@string/userpicture"
-            android:clickable="true"
-            android:onClick="goUpload"
             app:srcCompat="@drawable/user" />
 
         <EditText
@@ -67,16 +77,12 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/imgUser"
             android:layout_below="@id/edtName"
-            android:datePickerMode="spinner"
             android:ems="10"
             android:hint="Birthdate"
-            android:inputType="date"
             android:textColor="#5E5858"
             android:textColorHint="#006064" />
 
-
     </RelativeLayout>
-
 
     <EditText
         android:id="@+id/edtAddress"
@@ -97,7 +103,7 @@
         android:layout_marginTop="5dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:textColor="#5E5858"
+        android:textColor="@color/black"
         android:textColorHint="#006064" />
 
     <EditText
@@ -115,7 +121,7 @@
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#FFEB3B"
         android:text="@string/save"
         android:textColor="@color/black"
@@ -123,28 +129,60 @@
         android:clickable="true"
         android:onClick="goSave"/>
 
-    <TextView
-        android:id="@+id/txtLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:text="Log out"
-        android:textColor="#3F00FF"
-        android:textSize="20sp"
-        android:clickable="true"
-        android:onClick="goLogout"/>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box">
+
+<!--        <Button-->
+<!--            android:id="@+id/btnHistory"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="75dp"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:backgroundTint="#00ff00"-->
+<!--            android:clickable="true"-->
+<!--            android:onClick="goSave"-->
+<!--            android:text="Recycle History"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="15sp" />-->
+
+        <Button
+            android:id="@+id/btnPayment"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:backgroundTint="#00ff00"
+            android:clickable="true"
+            android:onClick="goSave"
+            android:text="Recycle History"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnPoint"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="45dp"
+            android:backgroundTint="#00ff00"
+            android:clickable="true"
+            android:onClick="goSave"
+            android:text="Point Collection"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/imgdiscussion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/discussion" />
+            android:layout_width="330dp"
+            android:layout_height="362dp"
+            android:layout_marginLeft="40dp"
+            app:srcCompat="@drawable/discussion"
+            android:scaleType="fitCenter"/>
+
     </RelativeLayout>
 
 </LinearLayout>

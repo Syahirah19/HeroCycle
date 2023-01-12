@@ -108,7 +108,7 @@ public class Register extends AppCompatActivity {
         user.setFullname("");
         user.setHomeAddress("");
         user.setBirthdate("");
-        user.setImageUrL("");
+        user.setImageURL("https://firebasestorage.googleapis.com/v0/b/herocycle-f74c8.appspot.com/o/Users%2FuserProfile.jpg?alt=media&token=a4b3543d-201f-4769-a10b-296a9428959a");
 
         db.collection("User")
                 .whereEqualTo("email",user.getEmail())

@@ -1,7 +1,7 @@
 package workshop.mobile.herocycle.model;
 
 public class User {
-    private String fullname, email, birthdate, homeAddress, mobile, password, imageUrL;
+    private String fullname, email, birthdate, homeAddress, mobile, password, imageURL;
 
     public User() {
 
@@ -55,11 +55,11 @@ public class User {
         this.password = password;
     }
 
-    public String getImageUrL() {
-        return imageUrL;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setImageUrL(String imageUrL) {
-        this.imageUrL = imageUrL;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
