@@ -44,8 +44,8 @@
             android:layout_marginLeft="20dp"
             android:contentDescription="@string/userpicture"
             android:clickable="true"
-            app:srcCompat="@drawable/user"
-            />
+            android:onClick="goUpload"
+            app:srcCompat="@drawable/user" />
 
         <EditText
             android:id="@+id/edtName"

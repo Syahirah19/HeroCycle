@@ -105,24 +105,29 @@ public class Register extends AppCompatActivity {
         user.setEmail(edtEmail.getText().toString());
         user.setMobile(edtTextPhone.getText().toString());
         user.setPassword(edtPassword.getText().toString());
+        user.setFullname("");
+        user.setHomeAddress("");
+        user.setBirthdate("");
+        user.setImageUrL("");
 
-        db.collection("User").whereEqualTo("email",user.getEmail()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()){
-                    for (QueryDocumentSnapshot document: task.getResult()){
-                        Toast.makeText(Register.this,"Email Already Register", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    db.collection("User").add(user).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentReference> task) {
-                            Toast.makeText(Register.this,"Successfully Registered", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Register.this, MainDashboard.class));
+        db.collection("User")
+                .whereEqualTo("email",user.getEmail())
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        for (QueryDocumentSnapshot document: task.getResult()){
+                            // To make pop up at bottom
+                            Toast.makeText(Register.this,"Email Already Register", Toast.LENGTH_SHORT).show();
+                            return;
                         }
-                    });
-                }
-            }
-        });
+                        db.collection("User").add(user).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentReference> task) {
+                                Toast.makeText(Register.this,"Successfully Registered", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(Register.this, MainDashboard.class));
+                            }
+                        });
+                    }
+                });
     }
 }
