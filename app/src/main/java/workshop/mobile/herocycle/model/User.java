@@ -3,9 +3,7 @@ package workshop.mobile.herocycle.model;
 public class User {
     private String fullname, email, birthdate, homeAddress, mobile, password, imageURL;
 
-    public User() {
-
-    }
+    public User() {}
 
     public String getFullname() {
         return fullname;

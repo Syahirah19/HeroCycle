@@ -18,26 +18,14 @@
         android:elevation="20dp" />
 
     <TextView
-        android:id="@+id/txtLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"
-        android:clickable="true"
-        android:onClick="goLogout"
-        android:text="Log out"
-        android:textColor="#3F00FF"
-        android:textSize="20sp" />
-    <TextView
         android:id="@+id/txtprofile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/edit_profile"
+        android:text="Edit Profile"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#0C0C0C"
         android:textSize="48sp" />
@@ -52,124 +40,90 @@
             android:id="@+id/imgUser"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="2dp"
             android:contentDescription="@string/userpicture"
             app:srcCompat="@drawable/user" />
 
-        <TextView
-            android:id="@+id/txtName"
+        <EditText
+            android:id="@+id/edtName"
             android:layout_width="240dp"
             android:layout_height="40dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_toEndOf="@id/imgUser"
             android:hint="@string/full_name"
-            android:textSize="16sp"
-            android:gravity="center"
+            android:inputType="textEmailAddress"
             android:textColor="#5E5858"
             android:textColorHint="#006064" />
 
-        <TextView
-            android:id="@+id/txtPoint"
+        <EditText
+            android:id="@+id/edtBirthdate"
             android:layout_width="240dp"
             android:layout_height="40dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="60dp"
+            android:layout_below="@id/edtName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/imgUser"
-            android:hint="Point collected"
-            android:textSize="16sp"
-            android:gravity="center"
+            android:ems="10"
+            android:hint="Birthdate"
             android:textColor="#5E5858"
             android:textColorHint="#006064" />
 
     </RelativeLayout>
 
-
-    <TextView
-        android:id="@+id/txtBirthdate"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:hint="Birthdate"
-        android:textColor="#5E5858"
-        android:textColorHint="#006064"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/txtEmail"
+    <EditText
+        android:id="@+id/edtAddress"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
+        android:hint="Home Address"
+        android:inputType="textEmailAddress"
         android:textColor="#5E5858"
-        android:hint="Email"
-        android:textColorHint="#006064"
-        android:textSize="16sp" />
+        android:textColorHint="#006064" />
 
-    <TextView
-        android:id="@+id/txtTextPhone"
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="#006064" />
+
+    <EditText
+        android:id="@+id/edtTextPhone"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
         android:hint="Mobile"
-        android:textColorHint="#006064"
-        android:textSize="16sp"/>
-
+        android:inputType="phone"
+        android:textColorHint="#006064" />
 
     <Button
-        android:id="@+id/btnEdit"
+        android:id="@+id/btnSave"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:backgroundTint="#FFEB3B"
-        android:text="Edit Profile"
+        android:text="@string/save"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:clickable="true"
-        android:onClick="goEdit"/>
+        android:onClick="goSave"/>
 
 
-    <RelativeLayout
-        android:layout_width="400dp"
-        android:layout_height="500dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/box">
-
-        <Button
-            android:id="@+id/btnHistory"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:backgroundTint="#00ff00"
-            android:clickable="true"
-            android:onClick="goSave"
-            android:text="Recycle History"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/imgdiscussion"
-            android:layout_width="330dp"
-            android:layout_height="362dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="40dp"
-            app:srcCompat="@drawable/discussion"
-            android:scaleType="fitCenter"/>
-
-    </RelativeLayout>
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <ImageView
+        android:id="@+id/imgdiscussion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_height="362dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/grass"
+        android:scaleType="fitCenter"/>
 
 </LinearLayout>

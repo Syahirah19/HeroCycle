@@ -19,7 +19,7 @@ import workshop.mobile.herocycle.rv.RvNewsAdapter;
 public class MainDashboard extends AppCompatActivity {
 
     RecyclerView rcViewItem, rcViewNews;
-    private ImageView imgAccount;
+    private ImageView imgAccount,imgRecycle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class MainDashboard extends AppCompatActivity {
         rcViewItem = findViewById(R.id.RcViewItem);
         rcViewNews = findViewById(R.id.RcViewNews);
         imgAccount = findViewById(R.id.imgAccount);
+        imgRecycle = findViewById(R.id.imgRecycle);
 
         item();
         news();
@@ -40,6 +41,15 @@ public class MainDashboard extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainDashboard.this,Account.class);
+                startActivity(intent);
+            }
+        });
+
+        imgRecycle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainDashboard.this,wasteRecognition.class);
                 startActivity(intent);
             }
         });

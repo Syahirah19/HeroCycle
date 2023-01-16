@@ -20,7 +20,7 @@
         android:layout_width="332dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Wholesale Price For New Inkjet Catridge"
         android:textColor="@color/black"

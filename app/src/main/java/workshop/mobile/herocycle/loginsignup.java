@@ -73,6 +73,7 @@ public class loginsignup extends AppCompatActivity {
 
                                     SharedPreferences.Editor editor = getSharedPreferences("UserPreferences",MODE_PRIVATE).edit();
                                     editor.putString("email",email);
+                                    editor.putString("uid",document.getId());
                                     editor.apply();
 
                                     Intent intent = new Intent(this, MainDashboard.class);

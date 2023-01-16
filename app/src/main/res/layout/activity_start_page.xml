@@ -43,17 +43,5 @@
         tools:layout_editor_absoluteY="211dp"
         android:textStyle="bold"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Let's get started!"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:backgroundTint="@color/white"
-        android:layout_gravity="center_horizontal"
-        android:onClick="goToLogin"
-        />
-
 
 </LinearLayout>
