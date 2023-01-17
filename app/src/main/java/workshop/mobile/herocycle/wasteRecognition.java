@@ -17,21 +17,24 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
-import workshop.mobile.herocycle.ml.Model;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
@@ -42,18 +45,20 @@ import java.nio.ByteOrder;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import workshop.mobile.herocycle.ml.Model;
 import workshop.mobile.herocycle.model.Collection;
 
 public class wasteRecognition extends AppCompatActivity {
 
     Button takePicture;
     ImageView imgWaste;
-
+    TextView result;
     String uid;
+    String itemUID;
     String currentPhotoPath;
 
     private Uri mImageUri;
-    int imageSize = 250;
+    int imageSize = 224;
     Bitmap image;
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -70,7 +75,7 @@ public class wasteRecognition extends AppCompatActivity {
         uid = prefs.getString("uid","");
 
         storage = FirebaseStorage.getInstance().getReference("Collections/");
-
+        result = findViewById(R.id.result);
         imgWaste = findViewById(R.id.imgWaste);
         takePicture = findViewById(R.id.takePicture);
 
@@ -112,9 +117,10 @@ public class wasteRecognition extends AppCompatActivity {
             File photoFile = null;
             try {
                 photoFile = createImageFile();
-            } catch (IOException ignored) {
-
+            } catch (IOException exception) {
+                Log.e("Error",exception.toString());
             }
+
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 mImageUri = FileProvider.getUriForFile(this,
@@ -126,28 +132,26 @@ public class wasteRecognition extends AppCompatActivity {
         }
     }
 
-    private String getFileExtension(Uri uri){
-        ContentResolver cR = getContentResolver();
-        MimeTypeMap mime = MimeTypeMap.getSingleton();
-        return mime.getExtensionFromMimeType(cR.getType(uri));
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            image = (Bitmap) data.getExtras().get("data");
-            int dimension = Math.min(image.getWidth(), image.getHeight());
-            image = ThumbnailUtils.extractThumbnail(image, dimension, dimension);
-            imgWaste.setImageBitmap(image);
 
-            image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
-            classifyImage(image);
-            uploadToDatabase();
+            try {
+                image = MediaStore.Images.Media.getBitmap(this.getContentResolver(),mImageUri);
+                int dimension = Math.min(image.getWidth(), image.getHeight());
+                image = ThumbnailUtils.extractThumbnail(image, dimension, dimension);
+                imgWaste.setImageBitmap(image);
+
+                image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
+                classifyImage(image);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void classifyImage(Bitmap image) {
+    public void classifyImage(Bitmap image){
         try {
             Model model = Model.newInstance(getApplicationContext());
 
@@ -185,38 +189,58 @@ public class wasteRecognition extends AppCompatActivity {
                 }
             }
             String[] classes = {"Plastic", "Glass", "Paper", "Others"};
-            String[] prices = {"0.4", "Not Available", "0.24-0.36", "Not Available"};
 
+            result.setText(classes[maxPos]);
+
+            uploadToDatabase(classes[maxPos]);
 
             // Releases model resources if no longer used.
             model.close();
         } catch ( IOException e) {
             // TODO Handle the exception
         }
+
     }
 
-    private void uploadToDatabase() {
-        StorageReference fileReference = storage.child(uid+"."+getFileExtension(mImageUri));
+    private String getFileExtension(Uri uri){
+        ContentResolver cR = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cR.getType(uri));
+    }
 
-        // Update commands
+    private void uploadToDatabase(String aClass) {
+
+        db.collection("Item").whereEqualTo("itemName", aClass).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()){
+                for (QueryDocumentSnapshot document : task.getResult()){
+                    itemUID = document.getId();
+                }
+            }
+        });
+
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        StorageReference fileReference = storage.child(uid+"_"+timeStamp +"."+getFileExtension(mImageUri));
+
+        // Upload commands
         StorageTask<UploadTask.TaskSnapshot> mUploadTask = fileReference.putFile(mImageUri)
                 .addOnSuccessListener(taskSnapshot -> taskSnapshot.getStorage().getDownloadUrl().addOnCompleteListener(task -> {
                     collection.setClcDate("");
                     collection.setClcDesc("");
                     collection.setClcPrice("");
                     collection.setClcStatus("Requested");
-                    collection.setItemID("");
+                    collection.setItemID(itemUID);
                     collection.setItemImage(task.getResult().toString());
                     collection.setReqDate("");
                     collection.setUserID(uid);
                     collection.setWeight("");
 
-                    db.collection("Collection").add(collection).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentReference> task) {
-                            Toast.makeText(wasteRecognition.this,"Successfully Registered", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(wasteRecognition.this, deliveryDetails.class));
-                        }
+                    db.collection("Collection").add(collection).addOnCompleteListener(task1 -> {
+                        Intent intent = new Intent(wasteRecognition.this, LocationDelivery.class);
+                        intent.putExtra("clcID",task1.getResult().getId());
+
+                        startActivity(intent);
+                        finish();
                     });
                 }));
     }

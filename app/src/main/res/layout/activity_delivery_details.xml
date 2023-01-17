@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".deliveryDetails"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradientgreen">
 
     <TextView
         android:id="@+id/upperyellowbar"
@@ -35,7 +36,7 @@
         android:backgroundTint="@color/yellow">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imgWaste"
             android:layout_width="161dp"
             android:layout_height="165dp"
             android:layout_centerVertical="true"
@@ -52,6 +53,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/txtCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
@@ -70,6 +72,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/txtWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
@@ -88,6 +91,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/txtPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
@@ -128,8 +132,8 @@
             android:textStyle="bold" />
 
 <!--        nak display centre based on state/region enter by user in location_delivery page-->
-                <Spinner
-            android:id="@+id/spinnerState"
+        <Spinner
+            android:id="@+id/spinnerCenter"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
@@ -166,6 +170,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="145dp"
             android:layout_marginTop="14dp"
+            android:gravity="center"
             android:background="@drawable/box"
             android:backgroundTint="@color/yellow"
             android:textColor="#000000"
@@ -183,6 +188,7 @@
         android:backgroundTint="@color/yellow"
         android:text="Comfirm"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="doConfirm"/>
 
 </LinearLayout>

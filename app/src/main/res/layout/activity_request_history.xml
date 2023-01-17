@@ -16,7 +16,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="70dp"
         android:gravity="center"
-        android:text="Recycle History"
+        android:text="Request History"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -34,30 +34,43 @@
         android:backgroundTint="@color/yellow">
 
         <TextView
-            android:id="@+id/reqDate"
+            android:id="@+id/dispImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
-            android:layout_toStartOf="@id/colDate"
+            android:layout_marginStart="15dp"
+            android:text="Item"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/reqDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/dispImage"
+            android:fontFamily="sans-serif"
             android:text="Request Date"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/colDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/reqDate"
             android:fontFamily="sans-serif"
             android:text="Collection Date"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
@@ -66,11 +79,12 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
             android:layout_toEndOf="@id/colDate"
             android:fontFamily="sans-serif"
-            android:text="Collection Price"
+            android:text="Request Status"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <View

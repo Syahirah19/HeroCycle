@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LocationDelivery"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradientgreen">
 
     <TextView
         android:id="@+id/upperyellowbar"
@@ -20,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="Recycle Item Detail"
         android:textColor="@color/black"
         android:textSize="38dp"
@@ -28,7 +29,7 @@
 
 
     <RelativeLayout
-        android:layout_width="385dp"
+        android:layout_width="365dp"
         android:layout_height="238dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
@@ -36,8 +37,8 @@
         android:backgroundTint="@color/yellow">
 
         <ImageView
-            android:id="@+id/imgPeople"
-            android:layout_width="161dp"
+            android:id="@+id/imgWaste"
+            android:layout_width="165dp"
             android:layout_height="165dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="15dp"
@@ -71,14 +72,16 @@
             android:textColor="@color/black"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/TxtWeight"
+        <EditText
+            android:id="@+id/edtWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
-            android:layout_marginTop="130dp"
-            android:text="Display ET weight"
+            android:layout_marginTop="120dp"
+            android:hint="Enter weight"
+            android:textColorHint="#059308"
             android:textColor="#059308"
+            android:inputType="number"
             android:textSize="18sp" />
 
         <TextView
@@ -92,7 +95,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/TxtPrice"
+            android:id="@+id/txtPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
@@ -108,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Enter Your State and Region: "
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -116,20 +119,20 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="57dp"
         android:layout_gravity="center">
 
         <TextView
             android:id="@+id/State"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginStart="30dp"
             android:layout_marginTop="14dp"
             android:text="State: "
             android:textColor="#000000"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_centerVertical="true" />
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerState"
@@ -224,6 +227,8 @@
         android:text="Next"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="doNext"/>
 
 </LinearLayout>

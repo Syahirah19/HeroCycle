@@ -1,16 +1,14 @@
-package workshop.mobile.herocycle.rv;
+package workshop.mobile.herocycle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import workshop.mobile.herocycle.R;
-
-public class rvLocation extends AppCompatActivity {
+public class requestHistory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rv_location);
+        setContentView(R.layout.activity_request_history);
     }
 }

@@ -1,6 +1,7 @@
 package workshop.mobile.herocycle.rv;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import workshop.mobile.herocycle.News_1;
+import workshop.mobile.herocycle.News_2;
+import workshop.mobile.herocycle.News_3;
+import workshop.mobile.herocycle.News_4;
+import workshop.mobile.herocycle.News_5;
 import workshop.mobile.herocycle.R;
+import workshop.mobile.herocycle.centre;
 import workshop.mobile.herocycle.model.RvItem;
 
 public class RvItemAdapter extends RecyclerView.Adapter<RvItemAdapter.RvItemHolder> {
@@ -38,6 +45,12 @@ public class RvItemAdapter extends RecyclerView.Adapter<RvItemAdapter.RvItemHold
         holder.textView.setText(currentItem.getText());
         holder.imageView.setImageResource(currentItem.getIcon());
 
+        holder.linearLayout.setOnClickListener(view -> {
+
+            Intent intent = new Intent(view.getContext(), centre.class);
+
+            view.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -48,12 +61,14 @@ public class RvItemAdapter extends RecyclerView.Adapter<RvItemAdapter.RvItemHold
     public static class RvItemHolder extends  RecyclerView.ViewHolder{
         TextView textView;
         ImageView imageView;
+        LinearLayout linearLayout;
 
         public RvItemHolder(@NonNull View itemView) {
             super(itemView);
 
             textView = itemView.findViewById(R.id.text);
             imageView = itemView.findViewById(R.id.image);
+            linearLayout = itemView.findViewById(R.id.linearlayout);
         }
     }
 }

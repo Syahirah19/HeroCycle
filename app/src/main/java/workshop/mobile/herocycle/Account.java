@@ -41,11 +41,11 @@ import workshop.mobile.herocycle.model.User;
 public class Account extends AppCompatActivity {
 
     TextView txtName, txtPoint, txtBirthdate, txtEmail, txtTextPhone;
-    Button btnHistory,btnEdit;
+    ImageView imgUser;
+    Button btnHistory,btnEdit, btnReqHistory;
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private StorageReference storage;
-    private StorageTask mUploadTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,11 @@ public class Account extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         txtTextPhone = findViewById(R.id.txtTextPhone);
 
+        imgUser = findViewById(R.id.imgUser);
+
         btnHistory = findViewById(R.id.btnHistory);
         btnEdit = findViewById(R.id.btnEdit);
+        btnReqHistory = findViewById(R.id.btnReqHistory);
 
         db.collection("User").document(userID).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -75,6 +78,9 @@ public class Account extends AppCompatActivity {
                          txtBirthdate.setText(documentSnapshot.get("birthdate").toString());
                          txtEmail.setText(documentSnapshot.get("email").toString());
                          txtTextPhone.setText(documentSnapshot.get("mobile").toString());
+
+                         String link = documentSnapshot.getData().get("imageURL").toString();
+                         Picasso.get().load(link).into(imgUser);
                      } else {
                          Toast.makeText(Account.this,"Data is not available",Toast.LENGTH_SHORT).show();
                      }
@@ -90,5 +96,9 @@ public class Account extends AppCompatActivity {
 
         btnEdit.setOnClickListener(
                 view -> startActivity(new Intent(Account.this, editAccount.class)));
+
+
+        btnReqHistory.setOnClickListener(
+                view -> startActivity(new Intent(Account.this, requestHistory.class)));
 
     }}

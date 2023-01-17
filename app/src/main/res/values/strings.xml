@@ -53,4 +53,212 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+
+    <string-array name="State">
+        <item>Kuala Lumpur</item>
+        <item>Putrajaya</item>
+        <item>Pulau Pinang</item>
+        <item>Selangor</item>
+        <item>Negeri Sembilan</item>
+        <item>Melaka</item>
+        <item>Johor</item>
+        <item>Pahang</item>
+        <item>Terengganu</item>
+        <item>Kelantan</item>
+        <item>Sabah</item>
+        <item>Serawak</item>
+        <item>Labuan</item>
+    </string-array>
+    <string-array name="RegionJohor">
+        <item>Johor Bahru</item>
+        <item>Batu Pahat</item>
+        <item>Kluang</item>
+        <item>Kulai</item>
+        <item>Muar</item>
+        <item>Kota Tinggi</item>
+        <item>Segamat</item>
+        <item>Pontian</item>
+        <item>Tangkak</item>
+        <item>Mersing</item>
+    </string-array>
+    <string-array name="RegionKedah">
+        <item>Sungai Petani</item>
+        <item>Alor Setar</item>
+        <item>Kulim</item>
+        <item>Kubang Pasu</item>
+        <item>Baling</item>
+        <item>Pendang</item>
+        <item>Langkawi</item>
+        <item>Yan</item>
+        <item>Sik</item>
+        <item>Padang Terap</item>
+        <item>Pokok Sena</item>
+        <item>Bandar Baharu</item>
+    </string-array>
+    <string-array name="RegionKelantan">
+        <item>Kota Bharu</item>
+        <item>Pasi Mas</item>
+        <item>Tumpat</item>
+        <item>Bachok</item>
+        <item>Tanah Merah</item>
+        <item>Pasir Puteh</item>
+        <item>Kuala Krai</item>
+        <item>Machang</item>
+        <item>Gua Musang</item>
+        <item>Jeli</item>
+        <item>Lojing</item>
+    </string-array>
+    <string-array name="RegionMelaka">
+        <item>Durian Tunggal</item>
+        <item>Krubong</item>
+        <item>Malim Jaya</item>
+        <item>Bukit Rambai</item>
+        <item>Alor Gajah</item>
+        <item>Jasin</item>
+        <item>Cheng</item>
+        <item>Ayer Keroh</item>
+        <item>Bandar Hilir</item>
+    </string-array>
+    <string-array name="RegionNegeriSembilan">
+        <item>Seremban</item>
+        <item>Jempol</item>
+        <item>Port Dickson</item>
+        <item>Tampin</item>
+        <item>Kuala Pilah</item>
+        <item>Rembau</item>
+        <item>Jelebu</item>
+    </string-array>
+    <string-array name="RegionPahang">
+        <item>Kuantan</item>
+        <item>Temerloh</item>
+        <item>Bentong</item>
+        <item>Maran</item>
+        <item>Rompin</item>
+        <item>Pekan</item>
+        <item>Bera</item>
+        <item>Raub</item>
+        <item>Jerantut</item>
+        <item>Lipis</item>
+        <item>Cameron Highlands</item>
+    </string-array>
+    <string-array name="RegionPerak">
+        <item>Kinta</item>
+        <item>Larut,Matang, Selama</item>
+        <item>Manjung</item>
+        <item>Hilir Perak</item>
+        <item>Kerian</item>
+        <item>Batang Padang</item>
+        <item>Kuala Kangsar</item>
+        <item>Perak Tengah</item>
+        <item>Hulu Perak</item>
+        <item>Kampar</item>
+        <item>Muallim</item>
+        <item>Bagan Datuk</item>
+    </string-array>
+    <string-array name="RegionPerlis">
+        <item>Perlis</item>
+    </string-array>
+    <string-array name="RegionPulauPinang">
+        <item>Timur Laut Pulau Pinang</item>
+        <item>Seberang Perai Tengah</item>
+        <item>Seberang Perai Utara</item>
+        <item>Barat Daya Pulau Pinang</item>
+        <item>Seberang Perai Selatan</item>
+    </string-array>
+    <string-array name="RegionSelangor">
+        <item>Petaling Jaya</item>
+        <item>Cyberjaya</item>
+        <item>Bangi</item>
+        <item>Rawang</item>
+        <item>Hulu Langat</item>
+        <item>Klang</item>
+        <item>Gombak</item>
+        <item>Kuala Langat</item>
+        <item>Sepang</item>
+        <item>Beranang</item>
+        <item>Kuala Selangor</item>
+        <item>Hulu Selangor</item>
+        <item>Sabak Bernam</item>
+        <item>Seri Kembangan</item>
+    </string-array>
+    <string-array name="RegionKualaLumpur">
+        <item>Kuala Lumpur</item>
+    </string-array>
+    <string-array name="RegionLabuan">
+        <item>Labuan</item>
+    </string-array>
+    <string-array name="RegionPutrajaya">
+        <item>Putrajaya</item>
+    </string-array>
+    <string-array name="RegionTerengganu">
+        <item>Petaling</item>
+        <item>Hulu Langat</item>
+        <item>Klang</item>
+        <item>Gombak</item>
+        <item>Kuala Langat</item>
+        <item>Sepang</item>
+        <item>Kuala Selangor</item>
+        <item>Hulu Selangor</item>
+        <item>Sabak Bernam</item>
+    </string-array>
+    <string-array name="RegionSabah">
+        <item>Kota Kinabalu</item>
+        <item>Tawau</item>
+        <item>Sandakan</item>
+        <item>Lahad Datu</item>
+        <item>Keningau</item>
+        <item>Kinabatangan</item>
+        <item>Semporna</item>
+        <item>Papar</item>
+        <item>Penampang</item>
+        <item>Beluran</item>
+        <item>Tuaran</item>
+        <item>Ranau</item>
+        <item>Kota Belud</item>
+        <item>Kudat</item>
+        <item>Kota Marudu</item>
+        <item>Beaufort</item>
+        <item>Kunak</item>
+        <item>Tenom</item>
+        <item>Putatan</item>
+        <item>Pitas</item>
+        <item>Tambunan</item>
+        <item>Tongod</item>
+        <item>Sipitang</item>
+        <item>Nabawan</item>
+        <item>Kuala Penyu</item>
+    </string-array>
+    <string-array name="RegionSarawak">
+        <item>Kuching</item>
+        <item>Miri</item>
+        <item>Sibu</item>
+        <item>Bintulu</item>
+        <item>Serian</item>
+        <item>Kota Samarahan</item>
+        <item>Sri Aman</item>
+        <item>Marudi</item>
+        <item>Betong</item>
+        <item>Sarikei</item>
+        <item>Kapit</item>
+        <item>Bau</item>
+        <item>Limbang</item>
+        <item>Saratok</item>
+        <item>Mukah</item>
+        <item>Simunjan</item>
+        <item>Lawas</item>
+        <item>Belaga</item>
+        <item>Lundu</item>
+        <item>Asajaya</item>
+        <item>Daro</item>
+        <item>Tatau</item>
+        <item>Maradong</item>
+        <item>Kanowit</item>
+        <item>Lubok Antu</item>
+        <item>Selangau</item>
+        <item>Song</item>
+        <item>Dalat</item>
+        <item>Matu</item>
+        <item>Julau</item>
+        <item>Pakan</item>
+    </string-array>
 </resources>
